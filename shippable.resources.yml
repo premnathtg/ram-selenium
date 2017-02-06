@@ -18,7 +18,7 @@ resources:
     seed:
       versionName: "latest" 
 	  
-  - name: firefox-node-img
+  - name: firefox-node-img-1
     type: image
     #integration: docker-hub-integration
     pointer:
@@ -27,7 +27,7 @@ resources:
     seed:
       versionName: "latest" 
 	  
-  - name: chrome-node-img
+  - name: chrome-node-img-1
     type: image
     #integration: docker-hub-integration
     pointer:
@@ -36,7 +36,7 @@ resources:
     seed:
       versionName: "latest" 
       
-  - name: chrome-node1-img
+  - name: chrome-node1-img-1
     type: image
     #integration: docker-hub-integration
     pointer:
