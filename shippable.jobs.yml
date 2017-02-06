@@ -21,7 +21,7 @@ jobs:
     flags:
       - test-selenium
 
-  - name: selenium-ecs-deploy
+  - name: selenium-ecs-deploy-1
     type: deploy
     steps:
       - IN: selenium-test-man-1
