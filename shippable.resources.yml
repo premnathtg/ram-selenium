@@ -1,6 +1,6 @@
 resources:
 
-  - name: selenium-img
+  - name: selenium-img-1
     type: image
     integration: aws-perm-ecr
     pointer:
@@ -9,7 +9,7 @@ resources:
     seed:
       versionName: "master.12"
 	  
-  - name: hub
+  - name: hub-1
     type: image
     #integration: docker-hub-integration
     pointer:
@@ -45,13 +45,13 @@ resources:
     seed:
       versionName: "latest"
 	  
-  - name: link-opts
+  - name: link-opts-1
     type: dockerOptions
     version:
       links:
         - hub
 		
-  - name: hub-opts
+  - name: hub-opts-1
     type: dockerOptions
     version:
       portMappings:
@@ -59,7 +59,7 @@ resources:
       logConfig:
         type: "json-file"  
 		
-  - name: selenium-clu
+  - name: selenium-clu-1
     type: cluster
     integration: az-ecs
     pointer:
