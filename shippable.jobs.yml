@@ -1,0 +1,30 @@
+jobs:
+
+  - name: selenium-test-man-1
+    type: manifest
+    steps:
+      - IN: hub
+      - IN: hub-opts
+        applyTo:
+          - hub
+      - IN: firefox-node-img
+      - IN: chrome-node-img  
+      - IN: chrome-node1-img
+      - IN: selenium-img 
+      - IN: link-opts
+        applyTo:
+          - firefox-node-img
+          - chrome-node-img   
+          - chrome-node1-img
+          - selenium-img
+      - TASK: managed
+    flags:
+      - test-selenium
+
+  - name: selenium-ecs-deploy
+    type: deploy
+    steps:
+      - IN: selenium-test-man-1
+      - IN: selenium-clu
+      - TASK: managed
+        deployMethod: upgrade
