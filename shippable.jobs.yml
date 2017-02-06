@@ -19,7 +19,7 @@ jobs:
           - selenium-img-1
       - TASK: managed
     flags:
-      - test-selenium
+      - ram-test-selenium
 
   - name: selenium-ecs-deploy-1
     type: deploy
